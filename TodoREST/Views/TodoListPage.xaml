@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Weather.TodoListPage" Title="Todo">
+	<StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+    <SearchBar x:Name="searchBar" Margin="20" Placeholder="enter 5 digit zip code">
+    </SearchBar>
+    <ListView x:Name="listView" Margin="20">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="20,0,0,0" HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                        <Label Text="{Binding Name}" VerticalTextAlignment="Center" />
+                        <!-- <Image Source="check.png" IsVisible="{Binding Done}" />-->
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </StackLayout>
+</ContentPage>
